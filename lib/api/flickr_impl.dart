@@ -14,12 +14,9 @@ class FlickrAPIImpl implements FlickrAPI {
     var uri = Uri.parse(
         '${_BASE_URL}?method=${_METHOD_GETPHOSET}&api_key=${APIkey}&photoset_id=${photosetID}&format=json&nojsoncallback=1'
     );
-    print(uri);
     var res = await http.get(
       uri
     );
-    print(res.body);
-    print(res.statusCode);
     return Photosets_getphotos.fromJson(jsonDecode(res.body));
   }
 }
