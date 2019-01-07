@@ -19,7 +19,7 @@ class Photoset {
   final String primary;
   final String owner;
   final String ownername;
-  final Photo photo;
+  final List<Photo> photo;
   final int page;
   final String per_page;
   final String perpage;

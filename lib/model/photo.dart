@@ -22,16 +22,22 @@ class Photo {
 
   static fromJson(json) {
     // TODO これ配列だからなんとかする
-    return new Photo(
-      json['id'],
-      json['secret'],
-      json['server'],
-      json['farm'],
-      json['title'],
-      json['isprimary'],
-      json['ispublic'],
-      json['isfriend'],
-      json['isfamily']
+    var result = new List<Photo>();
+    json.forEach((e) => 
+      result.add(
+        new Photo(
+          json['id'],
+          json['secret'],
+          json['server'],
+          json['farm'],
+          json['title'],
+          json['isprimary'],
+          json['ispublic'],
+          json['isfriend'],
+          json['isfamily']
+        ),
+      )
     );
+    return result;
   }
 }
