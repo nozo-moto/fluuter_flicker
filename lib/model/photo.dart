@@ -21,6 +21,7 @@ class Photo {
   final String isfamily;
 
   static fromJson(json) {
+    // TODO これ配列だからなんとかする
     return new Photo(
       json['id'],
       json['secret'],
