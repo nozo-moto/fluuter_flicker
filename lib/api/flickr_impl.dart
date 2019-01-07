@@ -10,7 +10,7 @@ class FlickrAPIImpl implements FlickrAPI {
   static const _METHOD_GETPHOSET = 'flickr.photosets.getPhotos';
 
   @override
-  Future<Photosets_getphotos> getPhotoset(String photosetID,String APIkey) async {
+  getPhotoset(String photosetID, String APIkey) async {
     var uri = Uri.parse(
         '${_BASE_URL}?method=${_METHOD_GETPHOSET}&api_key=${APIkey}&photoset_id=${photosetID}&format=json&nojsoncallback=1'
     );
