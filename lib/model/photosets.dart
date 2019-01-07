@@ -27,17 +27,19 @@ class Photoset {
   final String title ;
   final int total;
 
+  
   static fromJson(json) {
+    var photo_list = Photo.fromJson(json['photo']);
     return new Photoset(
       json['id'],
       json['primary'],
       json['owner'],
       json['ownername'],
-      json['photo'],
+      photo_list,
       json['page'],
       json['per_page'],
       json['perpage'],
-      Photo.fromJson(json['photo']),
+      json['pages'],
       json['title'],
       json['total']
     );
@@ -54,8 +56,9 @@ class Photosets_getphotos {
   final String stat;
 
   static fromJson(json) {
+    var photoset_json = Photoset.fromJson(json['photoset']);
     return new Photosets_getphotos(
-      json['photoset'], 
+      photoset_json, 
       json['stat']
     );
   }

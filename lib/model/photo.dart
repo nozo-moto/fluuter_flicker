@@ -15,10 +15,10 @@ class Photo {
   final String server;
   final int farm;
   final String title;
-  final String isprimary;
-  final String ispublic;
-  final String isfriend;
-  final String isfamily;
+  final int isprimary;
+  final int ispublic;
+  final int isfriend;
+  final int isfamily;
 
   static fromJson(json) {
     // TODO これ配列だからなんとかする
@@ -26,15 +26,15 @@ class Photo {
     json.forEach((e) => 
       result.add(
         new Photo(
-          json['id'],
-          json['secret'],
-          json['server'],
-          json['farm'],
-          json['title'],
-          json['isprimary'],
-          json['ispublic'],
-          json['isfriend'],
-          json['isfamily']
+          e['id'],
+          e['secret'],
+          e['server'],
+          e['farm'],
+          e['title'],
+          e['isprimary'],
+          e['ispublic'],
+          e['isfriend'],
+          e['isfamily']
         ),
       )
     );
