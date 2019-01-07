@@ -15,7 +15,7 @@ class Photo {
   final String server;
   final int farm;
   final String title;
-  final int isprimary;
+  final String isprimary;
   final int ispublic;
   final int isfriend;
   final int isfamily;

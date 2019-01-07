@@ -21,8 +21,8 @@ class Photoset {
   final String ownername;
   final List<Photo> photo;
   final int page;
-  final String per_page;
-  final String perpage;
+  final int per_page;
+  final int perpage;
   final int pages;
   final String title ;
   final int total;
